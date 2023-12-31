@@ -1,6 +1,6 @@
 // App.js
 import { useSelector } from 'react-redux';
-import LoginPage from './LoginPage';
+
 import DashboardPage from './Pages/DashboardPage';
 
 
@@ -15,11 +15,7 @@ function App() {
   return (
     <div >
      <div>
-      {/* {isAuthenticated ? (
-        <DashboardPage />
-      ) : (
-        <LoginPage />
-      )} */}
+   
 
       <DashboardPage />
      
