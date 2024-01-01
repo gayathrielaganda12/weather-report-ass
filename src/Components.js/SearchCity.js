@@ -2,7 +2,6 @@
 import axios from "axios";
 import { fetchWeatherRequest, fetchWeatherSuccess, fetchWeatherFailure } from "../actions/weatherActions";
 import searchIcon from '../assests/images/search.png'
-import {removeAuthentication} from '../actions/authActions'
 
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -37,10 +36,6 @@ const SearchCity = () => {
     }
   };
 
-  const logout = ()=>{
-    dispatch(removeAuthentication());
-
-  }
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
@@ -52,7 +47,7 @@ const SearchCity = () => {
   return (
     <div className="container-fluid ">
       <div className="row"  style={{backgroundColor:'#3a9fbf'}}>
-        <div className="col-11" >
+        <div className="col-12" >
         <form onSubmit={getData} className="d-flex justify-content-center align-items-center flex-row">
         <input
           placeholder="search by city"
@@ -68,9 +63,7 @@ const SearchCity = () => {
           
 
         </div>
-        <div className="1 pt-3 " >
-          <button className="text-blue bg-white pt-1 pb-1 text-gray-500   " style={{borderRadius:'5px',fontSize:'15px'}} onClick={logout}>Logout</button>
-        </div>
+   
 
 
       </div>
